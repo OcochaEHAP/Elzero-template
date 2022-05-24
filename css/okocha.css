@@ -870,8 +870,13 @@ header .mega-menu .links i {
   opacity: 1;
 }
 .work .box i {
-  margin: 0 15px;
-  width: 80px;
+  margin-bottom: 0.75em;
+  display: block;
+  color: #313131;
+  transition: var(--transition-duration);
+}
+.work .box:hover i {
+  animation: dancing 3s forwards;
 }
 .work .box h3 {
   margin: 0;
@@ -1422,7 +1427,10 @@ footer .copyright {
   text-align: center;
   margin: 50px 0 0;
   border-top: 1px solid #444;
-  /* display: block; */
+}
+footer .copyright i {
+  color: red;
+  margin-inline: 0.75em;
 }
 /* Responsive */
 @media (max-width: 767px) {
@@ -1505,6 +1513,20 @@ footer .copyright {
     opacity: 0;
     width: 200%;
     height: 200%;
+  }
+}
+@keyframes dancing {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  65% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 /* animation  */
